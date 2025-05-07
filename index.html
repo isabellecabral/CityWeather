@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <nav>
+        <h2 class="weather-logo">Weather</h2>
+
+        <div class="search-city">
+            <input type="text" name ="city" id="city_input"placeholder="enter city name">
+            <button type="button" id="searchBtn">
+                <i class='bx bx-search'></i> Search</button>
+            <button type="button" id="locationBtn">
+                <i class='bx bx-target-lock'></i> Current Location</button>
+        </div>
+
+        <ul class="nav-list">
+            <li>Weather in Cubatão</li>
+            <li>°C</li>
+            <li>°F</li>
+        </ul>
+    </nav>
+
+    <div class="weather-data">
+        <div class="weather-top">
+
+            <!--1°card-->
+            <div class="weather-icon">
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+            </div>
+
+            <!--2°card-->
+            <div class="card">
+                <div class="current-weather">
+                    
+                    <div class="details">
+                        <h2>Wednesday 07 May 15:00</p>
+                        <br>
+                        <p class="current-temp">___&deg;C</p>
+                        <p>_____</p>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="card-footer">
+                    <p>feels likes __ &deg;C</p>
+                </div>
+            </div>
+
+            <!--3°card-->
+            <div class="card">
+                <h2>More Details</h2>
+                <br>
+                <p>Wind Speed: __ m/s</p>
+                <p> Air humidity: ___%</p>
+                <p>Presure: __</p>
+                <p>Precipitation probability: _%</p>
+            </div>
+
+            <!--4°card-->
+            <div class="temp-hour">
+                <p>NIGHT</p>
+                <p>MORNING</p>
+                <p>DAY</p>
+                <p>EVENING</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
