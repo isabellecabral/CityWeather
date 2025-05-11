@@ -42,7 +42,7 @@ nav{
 
 
 & #searchBtn{
-    border: none;
+    border: 1px solid transparent;
     font-size:16px;
     padding: 12px;
     border-radius: 25px;
@@ -60,7 +60,7 @@ nav{
 }
 
 & #locationBtn{
-    border: none;
+    border: 1px solid transparent;
     font-size:16px;
     padding: 12px;
     border-radius: 25px;
@@ -90,20 +90,27 @@ li{
 }
 
 .weather-data{
-    margin-top: 200px;
+    margin-top: 150px;
     margin-left: 50px;
     font-size: 16px;
     margin-right: 50px;
+    padding: 30px;
 }
 
 .weather-top{
     display: flex;
-    
+    margin-bottom: 80px;
+}
+
+.weather-icon{
+    display: flex;
+    align-items: center;
 }
 
 .card{
     color: #fff;
     margin-right: 70px;
+    font-size: 12px;
 }
 
 .card h2{
@@ -111,14 +118,18 @@ li{
 }
 
 .current-temp{
-    color: #F4A15B;
-    font-size: 30px;
+    color: #E67657;
+    font-size: 40px;
+}
+
+.card-details{
+    color: #fff;
+    margin-right: 70px;
+    font-size: 12px;
 }
 
 .temp-hour{
-    display: flex;  
-    justify-content: space-around;
-    width: 70vw;
+    width: 50vw;
     background-color: transparent;
     backdrop-filter: blur(15px);
     color:#fff;
@@ -126,7 +137,53 @@ li{
     border-radius: 4px;
 }
 
+.header-temp-hour{
+    display: flex;  
+    justify-content: space-around;
+    padding-top:10px ;
+}
 
+.footer-temp-hour{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 10px;
+    
+}
+
+.card-temp-hour{
+    
+    padding: 10px;
+}
+
+.card-temp-hour img{
+    max-height: 60px;
+}
+
+.weather-footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 5px;
+
+    font-size: 10px;
+    color: #fff;
+}
+
+.title-week-temp{
+    color: #fff;
+    font-size: 12px;
+}
+
+hr {
+    border: 1px solid #fff;
+  }
+
+  .card-day img{
+    max-height: 50px;
+
+  }
 
 
 
