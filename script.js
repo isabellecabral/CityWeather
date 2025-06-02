@@ -1,6 +1,7 @@
-require('dotenv').config();
+//require('dotenv').config();
 
-const apiKey = process.env.API_KEY;
+//const apiKey = process.env.API_KEY;
+const apiKey ='df205e8245376bc7dbf049579942d259';
 
 
 let cityInput = document.getElementById('city_input'),
