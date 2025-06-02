@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const apiKey = process.env.API_KEY;
 
+
 let cityInput = document.getElementById('city_input'),
     searchBtn = document.getElementById('searchBtn'),
     locationBtn = document.getElementById('locationBtn');
@@ -64,8 +65,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
 
         NavcityName.innerHTML = `
         <li>Weather in ${data.name}</li>
-            <li>°C</li>
-            <li>°F</li>
+            
             `
 
         weatherIconCard.innerHTML = `
