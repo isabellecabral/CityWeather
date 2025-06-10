@@ -23,7 +23,7 @@ function getCityCoordinates() {
     let GEOCODING_API_URL_ = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
     fetch(GEOCODING_API_URL_).then(res => res.json()).then(data => {
         let { name, lat, lon, country, state } = data[0];
-        getWeatherDetails(name, lat, lon, country, state);
+        getWeatherDetails(cityName, lat, lon, country, state);
 
     }).catch(() => {
         alert(`Failed to fetch coordinates of ${cityName}`)
@@ -31,10 +31,19 @@ function getCityCoordinates() {
 }
 
 
-function getWeatherDetails(name, lat, lon, country, state) {
-    let FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`,
+function getWeatherDetails(cityName, lat, lon, country, state) 
+{
 
-        WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`,
+
+    //antiga url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
+    //nova url = api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
+
+    let FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`,
+
+    //nova url 
+    //antiga url https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}
+
+        WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`,
         days = [
             'Sunday',
             'Monday',
